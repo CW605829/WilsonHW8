@@ -1,0 +1,7 @@
+#!/bin/bash
+config-pin p9.12 gpio
+config-pin p8.16 gpio_pu
+
+echo "Building test all application"
+g++ -Wall test_all_App.cpp analogIn.cpp GPIO.cpp derek_LED.cpp -o tester -pthread
+echo "Build complete"
